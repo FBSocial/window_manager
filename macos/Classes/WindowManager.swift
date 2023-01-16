@@ -41,7 +41,7 @@ public class WindowManager: NSObject, NSWindowDelegate {
     private var _mainWindow: NSWindow?
     public var mainWindow: NSWindow {
         get {
-            return _mainWindow!
+            return _mainWindow ?? NSApp.windows[0]
         }
         set {
             _mainWindow = newValue
